@@ -1,0 +1,1 @@
+/usr/bin/cc  -mmacosx-version-min=10.5 -O3 -DNDEBUG  -arch i386 -arch ppc -arch x86_64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/midithru.dir/midithru.c.o  -o ../midithru  ../libportmidi_s.a -framework CoreAudio -framework CoreFoundation -framework CoreMIDI -framework CoreServices 
