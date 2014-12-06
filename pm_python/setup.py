@@ -146,7 +146,7 @@ if sys.platform == 'win32':
     EXTENSION = dict(
         ext_modules=[ 
             Extension("pyportmidi._pyportmidi", [os.path.join("pyportmidi", "_pyportmidi.pyx")],
-                      library_dirs = ["../Release"],
+                      library_dirs = ["../pm_common/Release"],
                       libraries = ["portmidi", "winmm"],
                       include_dirs = ["../porttime"],
 #                  define_macros = [("_WIN32_", None)]) # needed by portmidi.h
@@ -173,7 +173,7 @@ else:
     EXTENSION = dict(
         ext_modules=[ 
             Extension("pyportmidi._pyportmidi", [os.path.join("pyportmidi", "_pyportmidi.pyx")],
-                      library_dirs=["./linux"],
+                      library_dirs=["../pm_common/Release"],
                       libraries = ["portmidi", "asound", "pthread"]
                       )
         ]
